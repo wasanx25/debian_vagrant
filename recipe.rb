@@ -13,10 +13,31 @@ execute 'tar -zxf git-2.10.2.tar.gz'
   end
 end
 
+git "~/dotfiles/" do
+  repository 'git://github.com/wataru0225/dotfiles.git'
+end
+
+git "~/.vim/bundle/" do
+  repository 'git://github.com/Shougo/neobundle.vim'
+end
+
+git "~/.oh-my-zsh/" do
+  repository 'git://github.com/robbyrussell/oh-my-zsh.git'
+end
+
+execute 'sh dotfiles/dotfiles_link.sh'
+execute 'sudo chsh -s /bin/zsh vagrant'
+
 # if you want to do that had some latest docker installed,
 # you should execute the command below.
 # wget -N https://get.docker.com/ | sh
 
 # install latest docker
-execute 'wget -qO- https://get.docker.com/ | sh'
-execute 'sudo usermod -aG docker $USER'
+# execute 'wget -qO- https://get.docker.com/ | sh'
+# execute 'sudo usermod -aG docker $USER'
+
+# install latest docker-compose
+# execute 'sudo -i'
+# execute 'curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose'
+# execute 'chmod +x /usr/local/bin/docker-compose'
+# execute 'exit'
