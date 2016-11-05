@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
 
+  # necessary package
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     sudo apt-get update -y && sudo apt-get upgrade -y
     sudo apt-get install -y make gcc wget zsh curl \
