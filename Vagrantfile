@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
                             libexpat1-dev \
                             autoconf \
                             build-essential \
-                            gettext
+                            gettext \
+                            tig
   SHELL
 
   config.vm.provision :itamae do |i|
