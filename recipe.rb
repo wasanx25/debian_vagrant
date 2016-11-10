@@ -17,7 +17,8 @@ git "~/dotfiles/" do
   repository 'git://github.com/wataru0225/dotfiles.git'
 end
 
-git "~/.vim/bundle/" do
+execute 'mkdir -p ~/.vim/bundle'
+git "~/.vim/bundle/neobundle.vim" do
   repository 'git://github.com/Shougo/neobundle.vim'
 end
 
@@ -33,11 +34,15 @@ execute 'sudo chsh -s /bin/zsh vagrant'
 # wget -N https://get.docker.com/ | sh
 
 # install latest docker
-# execute 'wget -qO- https://get.docker.com/ | sh'
-# execute 'sudo usermod -aG docker $USER'
+execute 'wget -qO- https://get.docker.com/ | sh'
+execute 'sudo usermod -aG docker $USER'
 
 # install latest docker-compose
 # execute 'sudo -i'
 # execute 'curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-$(uname -s)-$(uname -m)" > /usr/local/bin/docker-compose'
 # execute 'chmod +x /usr/local/bin/docker-compose'
 # execute 'exit'
+
+# add directory for work
+execute 'sudo mkdir -p /var/www/'
+execute 'sudo chown vagrant:vagrant /var/www/'

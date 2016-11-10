@@ -14,7 +14,8 @@ Vagrant.configure("2") do |config|
                             autoconf \
                             build-essential \
                             gettext \
-                            tig
+                            tig \
+                            vim
   SHELL
 
   config.vm.provision :itamae do |i|
