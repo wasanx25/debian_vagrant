@@ -3,6 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
+  config.vm.network :forwarded_port, host: 3000, guest: 3000
 
   # necessary package
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
