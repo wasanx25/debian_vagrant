@@ -13,5 +13,5 @@ execute 'tar -zxf git-2.10.2.tar.gz'
   end
 end
 
-execute 'git config --global user.name wataru0225'
-execute 'git config --global user.email wataru.kikuchi0225@gmail.com'
+# execute 'git config --global user.name wataru0225'
+# execute 'git config --global user.email wataru.kikuchi0225@gmail.com'

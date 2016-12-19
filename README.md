@@ -8,5 +8,6 @@
 
 ```
 vagrant plugin install vagrant-itamae
+vagrant up --provision
 ```
 

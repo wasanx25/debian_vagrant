@@ -23,11 +23,5 @@ Vagrant.configure("2") do |config|
     i.sudo = true
     i.recipes = ["./recipe.rb"]
   end
-
-  # config.vm.provision "docker" do |d|
-  #   d.build_dir = "./"
-  #   d.build_image "./",
-  #                 args: "-t 'foo'"
-  # end
 end
 
